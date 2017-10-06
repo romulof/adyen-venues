@@ -1,6 +1,6 @@
 # Venues demo webapp
 
-Working demo: http://romulof.github.io/adyen-venues
+Working demo: http://romulof.github.io/venues-demo
 
 ### Structure
 
