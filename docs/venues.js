@@ -506,6 +506,7 @@
   elements.searchInput.addEventListener('keypress', function(event) {
     if (event.keyCode === KEY_ENTER) {
       location.hash = '#search=' + encodeURIComponent(elements.searchInput.value)
+      elements.searchInput.blur();
       return false;
     }
     return true;

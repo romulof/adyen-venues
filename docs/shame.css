@@ -1,2 +1,2 @@
-.button{display:block!important;line-height:42px}.separator{position:relative;text-align:center}.separator__left{left:0}.separator__left,.separator__right{position:absolute;top:50%;width:calc(50% - 20px);height:0;border-bottom:1px solid rgba(0,0,0,.1)}.separator__right{right:0}.separator__center{width:100%;margin:0;text-align:center}
+.separator{position:relative;text-align:center}.separator__left{left:0}.separator__left,.separator__right{position:absolute;top:50%;width:calc(50% - 20px);height:0;border-bottom:1px solid rgba(0,0,0,.1)}.separator__right{right:0}.separator__center{width:100%;margin:0;text-align:center}.result__rating{font-size:14px;font-weight:700}
 /*# sourceMappingURL=shame.css.map */

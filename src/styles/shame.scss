@@ -1,10 +1,6 @@
 // Here I hide all the bad thing needed to run on IE9
 @import "defs";
 
-.button {
-  display: block !important;
-  line-height: 42px;
-}
 
 .separator {
   $center-width: 20px;
@@ -33,5 +29,12 @@
     width: 100%;
     margin: 0;
     text-align: center;
+  }
+}
+
+.result {
+  &__rating {
+    font-size: 14px;
+    font-weight: bold;
   }
 }
