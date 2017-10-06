@@ -1,0 +1,143 @@
+@import "defs";
+
+.results {
+  $header-height: 36px;
+  width: 100%;
+  height: 100%;
+
+  &__header {
+    position: relative;
+    width: 100%;
+    height: $header-height;
+    padding-bottom: 16px;
+    border-bottom: 1px solid $color-bg-black;
+  }
+  
+  &__location {
+    padding-right: 16px;
+    font-weight: bold;
+    text-align: left;
+    text-overflow: ellipsis;
+    color: $color-grey-dark;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  &__radius {
+    // Mimic Google Maps controls
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    height: 29px;
+    padding: 8px;
+    border: 0;
+    border-radius: 2px;
+    outline: 0;
+    margin: 0;  
+    appearance: none;
+    box-shadow: $color-bg-black 0px 1px 4px -1px;
+    background: $color-white;
+    color: #565656;
+    font-family: Roboto, Arial, sans-serif;
+    user-select: none;
+    font-size: 11px;
+    cursor: pointer;
+    
+    &:active,
+    &:hover {
+      color: $color-black;
+      background: #ebebeb;
+    }
+  }
+
+  &__clear {
+    float: right;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    margin: 0;
+    background-color: transparent;
+    background-image: url('images/icon-cancel.svg');
+    background-size: contain;
+  }
+
+  &__container {
+    width: 100%;
+    height: calc(100% - #{$header-height});
+    padding: 0;
+    margin: 0;// -16px; // Strech into parent padding
+    list-style: none;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+.result {
+  $icon-size: 36px;
+  $rating-width: 72px;
+  $padding-vertical: 8px;
+  $padding-horizontal: 16px;
+  position: relative;
+  display: block;
+  height: 54px;
+  width: 100%;
+  padding: $padding-vertical 0 $padding-vertical #{$icon-size + $padding-horizontal};
+  border-bottom: 1px solid $color-bg-black;
+  font-size: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: $color-black;
+
+  &__icon {
+    position: absolute;
+    top: $padding-vertical;
+    left: 0;
+    width: $icon-size;
+    height: $icon-size;
+    border: 1px solid $color-bg-black;
+    border-radius: 4px;
+  }
+
+  &__title {
+    position: absolute;
+    top: $padding-vertical;
+    left: $icon-size + $padding-horizontal;
+    right: $padding-horizontal + $rating-width + $padding-horizontal;
+    text-align: left;
+    font-weight: bold;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &__rating {
+    position: absolute;
+    top: $padding-vertical;
+    right: $padding-horizontal;
+    width: $rating-width;
+    text-align: right;
+    line-height: 14px;
+    font-weight: bold; // IE9 fix
+    font-family: $font-symbol;
+    color: $color-yellow;
+  }
+
+  &__type {
+    position: absolute;
+    bottom: $padding-vertical;
+    left: $icon-size + $padding-horizontal;
+    text-align: left;
+    color: $color-grey-dark;
+  }
+
+  &__distance {
+    position: absolute;
+    bottom: $padding-vertical;
+    right: $padding-horizontal;
+    text-align: right;
+    color: $color-grey-dark;
+  }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Adyen Venues</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" type="text/css" href="shame.css">
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+        <div class="map"></div>
+
+        <div class="login hidden">
+          <div class="logo">
+            <img class="logo__adyen" src="images/logo-adyen.svg">
+            <div class="logo__3d">front-end challenge</div>
+            <div class="logo__comic">to show venues around me</div>
+            <div class="logo__subtitle">(I'm terrible at branding)</div>
+          </div>
+          <button class="button button--login" id="loginBtn">
+            <span class="button__text">Connect with</span>
+            <img class="button__image" alt="foursquare" src="images/logo-foursquare.svg">
+          </button>
+        </div>
+
+        <div class="content">
+          <div class="search">
+            <input class="input search__input" id="searchInput" placeholder="Search for and address" />
+              
+            <div class="search__locate">
+              <div class="separator">
+                <div class="separator__left"></div>
+                <div class="separator__center">or</div>
+                <div class="separator__right"></div>
+              </div>
+
+              <a class="button" href="#search">Locate me</a>
+            </div>
+          </div>
+    
+          <div class="results">
+            <div class="results__header">
+              <button class="results__clear" id="resultsClearBtn"></button>
+              <button class="results__radius" id="resultsRadiusBtn">Search distance</button>
+              <div class="results__location"></div>
+            </div>
+            
+            <ul class="results__container" id="resultsContainer"></ul>
+          </div>
+  
+          <div class="detail">
+            <button class="detail__close" onclick="history.back()"></button>
+            <h1 class="detail__title"></h1>
+            <div class="detail__category"></div>
+            <div class="detail__rating"></div>
+            <div class="detail__price"></div>
+            <div class="detail__address"></div>
+            <div class="detail__photos"></div>
+          </div>
+        </div>
+    </div>
+    
+    <!-- Promise polyfill -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/4.1.1/es6-promise.auto.js"></script>
+    
+    <!-- Fetch polyfill -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.min.js"></script>
+
+    <!--[if lte IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/classlist/2014.01.31/classList.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/placeholders/4.0.1/placeholders.min.js"></script>
+    <script src="shame.js"></script>
+    <![endif]-->
+    
+    <!-- Application -->
+    <script src="venues.js"></script>
+    
+    <!-- Google Maps -->
+    <script async defer src="//maps.googleapis.com/maps/api/js?key=AIzaSyAtc5WZa-5SRUzA39uYry0v7_5gjuaJYGo&callback=initMap"></script>
+  </body>
+</html>

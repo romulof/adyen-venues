@@ -1,0 +1,37 @@
+// Here I hide all the bad thing needed to run on IE9
+@import "defs";
+
+.button {
+  display: block !important;
+  line-height: 42px;
+}
+
+.separator {
+  $center-width: 20px;
+  position: relative;
+  text-align: center;
+
+  &__left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: calc(50% - #{$center-width});
+    height: 0;
+    border-bottom: 1px solid $color-bg-black;
+  }
+
+  &__right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: calc(50% - #{$center-width});
+    height: 0;
+    border-bottom: 1px solid $color-bg-black;
+  }
+
+  &__center {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}

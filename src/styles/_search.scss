@@ -1,0 +1,25 @@
+@import "defs";
+
+
+.search {
+}
+
+.separator {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  margin: 16px 0;
+  
+  &__right,
+  &__left {
+    flex: 1;
+    height: 0;
+    border-bottom: 1px solid $color-bg-black;
+  }
+
+  &__center {
+    margin: 0 16px;
+    color: $color-bg-black
+  }
+}

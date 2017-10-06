@@ -1,0 +1,29 @@
+{
+  "name": "adyen-venues",
+  "version": "0.0.0",
+  "license": "MIT",
+  "description": "Show venues around you",
+  "author": "Rômulo Fernandes (romulo.fernandes@gmail.com)",
+  "repository": "https://github.com/romulof/adyen-venues",
+  "bugs": "https://github.com/romulof/adyen-venues/issues",
+  "homepage": "https://romulof.github.io/adyen-venues",
+  "browserslist": [
+    "> 5%",
+    "IE >= 9"
+  ],
+  "scripts": {
+    "start": "gulp watch",
+    "build": "gulp"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
+    "cssnano": "^3.10.0",
+    "gulp": "^3.9.1",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
+    "postcss-flexibility": "^2.0.0",
+    "pump": "^1.0.2"
+  }
+}

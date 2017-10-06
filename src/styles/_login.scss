@@ -1,0 +1,91 @@
+@import "defs";
+
+.login {
+  $width: 320px;
+  $height: 280px;
+  position: absolute;
+  top: calc(50% - #{$height / 2});
+  left: calc(50% - #{$width / 2});
+  padding: 16px;
+  width: $width;
+  height: $height;
+  border-radius: 8px;
+  box-shadow: $shadow;
+  text-align: center;
+  background: $color-bg-white;
+  transition: top $anim-slow;
+  
+  @supports (backdrop-filter: saturate(180%) blur(20px)) {
+    background: rgba($color-bg-white, .7);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+
+  .button--login {
+      background-color: $color-blue-foursquare;
+      color: $color-white;
+      
+      &:hover {
+        background-color: lighten($color-blue-foursquare, 10%);
+      }
+    
+      &:active {
+        background-color: darken($color-blue-foursquare, 10%);
+      }
+  }
+
+  .button__image {
+    vertical-align: -2px;
+    margin-left: 4px;
+  }
+}
+
+.logo {
+  width: 288px;
+  margin-bottom: 32px;
+  text-align: center;
+
+  &__adyen {
+    height: 64px;
+  }
+
+  &__3d {
+    $color: $color-pink;
+    color: $color;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.2em;
+    white-space: nowrap;
+    transform: rotate(-15deg);
+    margin: -10px 0 20px;
+
+    // Fake 3D text effect
+    text-shadow: -1px 1px 0 darken($color, 10%),
+      -2px 2px 0 darken($color, 20%),
+      -3px 3px 0 darken($color, 30%),
+      -4px 4px 0 darken($color, 40%),
+      -5px 5px 0 darken($color, 50%),
+      -6px 6px 1px rgba($color-black, .25),
+      0 0 5px rgba($color-black, .25),
+      -1px 1px 3px rgba($color-black, .25),
+      -3px 3px 5px rgba($color-black, .25),
+      -5px 5px 10px rgba($color-black, .25),
+      -10px 10px 10px rgba($color-black, .25),
+      -20px 20px 20px rgba($color-black, .25);
+  }
+
+  &__comic {
+    @include text-stroke($color-white);
+    width: 100%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: $font-comic;
+  }
+
+  &__subtitle {
+    @include text-stroke($color-white);
+    margin: 16px;
+    color: $color-black;
+  }
+}
